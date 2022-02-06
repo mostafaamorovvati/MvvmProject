@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MvvmProject</string>
+    <string name="photo_activity_txt">photo activity</string>
 </resources>

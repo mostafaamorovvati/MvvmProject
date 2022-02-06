@@ -1,6 +1,8 @@
 package com.example.mvvmproject.ui.photos
 
+import android.content.Intent
 import android.os.Bundle
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmproject.BR
 import com.example.mvvmproject.R
@@ -68,4 +70,10 @@ class PhotoActivity : BaseActivity<ActivityPhotoBinding, PhotoViewModel>(), Phot
     override fun getLayoutId() = R.layout.activity_photo
 
     override fun getViewModel() = mViewModel
+
+    companion object {
+        fun openActivity(activity: FragmentActivity): Intent {
+            return Intent(activity, PhotoActivity::class.java)
+        }
+    }
 }
