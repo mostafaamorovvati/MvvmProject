@@ -2,7 +2,10 @@ package com.example.mvvmproject.ui.user
 
 import com.example.mvvmproject.data.remote.model.User
 
-class UserItemViewModel(val user: User) {
+class UserItemViewModel(
+    val user: User,
+    val mListener: OnItemClickListener
+) {
 
     fun getName(): String {
         return "NAME: ${user.name}"
@@ -30,6 +33,15 @@ class UserItemViewModel(val user: User) {
 
     fun getCompany(): String {
         return "COMPANY: ${user.company?.name}"
+    }
+
+    fun onItemClick() {
+        mListener.onItemClick(user)
+    }
+
+
+    interface OnItemClickListener {
+        fun onItemClick(item: User)
     }
 
 }

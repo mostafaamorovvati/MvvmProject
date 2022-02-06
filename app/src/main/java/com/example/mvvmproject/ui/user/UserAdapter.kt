@@ -11,6 +11,7 @@ import com.example.mvvmproject.ui.base.BaseViewHolder
 class UserAdapter : RecyclerView.Adapter<BaseViewHolder>() {
 
     private var mUsers: MutableList<User> = mutableListOf()
+    var mListener: UserItemViewModel.OnItemClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
         return UserViewHolder(
@@ -33,12 +34,16 @@ class UserAdapter : RecyclerView.Adapter<BaseViewHolder>() {
     }
 
     inner class UserViewHolder(private val mBinding: UserItemLayoutBinding) :
-        BaseViewHolder(mBinding.root) {
+        BaseViewHolder(mBinding.root), UserItemViewModel.OnItemClickListener {
 
         override fun onBind(position: Int) {
-            val itemViewModel = UserItemViewModel(mUsers[position])
+            val itemViewModel = UserItemViewModel(mUsers[position], this)
             mBinding.userItemViewModel = itemViewModel
             mBinding.executePendingBindings()
+        }
+
+        override fun onItemClick(item: User) {
+            mListener?.onItemClick(item)
         }
     }
 }

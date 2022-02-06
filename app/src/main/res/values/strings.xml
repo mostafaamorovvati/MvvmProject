@@ -3,4 +3,5 @@
     <string name="photo_activity_txt">Photo activity</string>
     <string name="user_activity_txt">User activity</string>
     <string name="no_interner_txt">No internet connection</string>
+    <string name="ok_txt">Ok</string>
 </resources>
