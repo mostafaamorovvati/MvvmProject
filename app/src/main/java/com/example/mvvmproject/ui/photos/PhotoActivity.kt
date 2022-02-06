@@ -10,7 +10,6 @@ import com.example.mvvmproject.data.remote.model.Status
 import com.example.mvvmproject.databinding.ActivityPhotoBinding
 import com.example.mvvmproject.ui.base.BaseActivity
 import com.example.mvvmproject.utils.gone
-import com.example.mvvmproject.utils.log
 import com.example.mvvmproject.utils.toast
 import com.example.mvvmproject.utils.visible
 import org.koin.android.ext.android.inject
@@ -30,13 +29,15 @@ class PhotoActivity : BaseActivity<ActivityPhotoBinding, PhotoViewModel>(), Phot
         mViewModel.setNavigator(this)
         mBinding = getViewDataBinding()
 
-        setupUserObserver()
+        mViewModel.getPhotos(this)
+
+        setupPhotosObserver()
         setupPhotoList()
 
     }
 
-    private fun setupUserObserver() {
-        mViewModel.mPhotoList.observe(this, {
+    private fun setupPhotosObserver() {
+        mViewModel.mPhotosList.observe(this, {
             it?.let {
                 when (it.status) {
                     Status.SUCCESS -> {

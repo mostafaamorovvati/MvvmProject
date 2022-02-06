@@ -4,4 +4,6 @@ class ApiHelperImpl(private val apiService: ApiService) : ApiHelper {
 
     override suspend fun getPhotos() = apiService.getPhotos()
 
+    override suspend fun getUsers() = apiService.getUsers()
+
 }
