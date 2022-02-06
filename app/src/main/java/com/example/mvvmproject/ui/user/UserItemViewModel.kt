@@ -3,8 +3,8 @@ package com.example.mvvmproject.ui.user
 import com.example.mvvmproject.data.remote.model.User
 
 class UserItemViewModel(
-    val user: User,
-    val mListener: OnItemClickListener
+    private val user: User,
+    private val mListener: OnItemClickListener
 ) {
 
     fun getName(): String {
