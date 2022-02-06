@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmproject.BR
 import com.example.mvvmproject.R
-import com.example.mvvmproject.data.remote.model.Status
+import com.example.mvvmproject.utils.Status
 import com.example.mvvmproject.databinding.ActivityUserBinding
 import com.example.mvvmproject.ui.base.BaseActivity
 import com.example.mvvmproject.utils.gone

@@ -1,4 +1,4 @@
-package com.example.mvvmproject.data.remote.model
+package com.example.mvvmproject.utils
 
 enum class Status {
     SUCCESS,

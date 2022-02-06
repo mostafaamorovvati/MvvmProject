@@ -4,7 +4,6 @@ import com.example.mvvmproject.data.remote.api.ApiHelper
 import com.example.mvvmproject.data.remote.api.ApiHelperImpl
 import com.example.mvvmproject.data.remote.api.ApiService
 import com.example.mvvmproject.utils.BASE_URL
-import com.example.mvvmproject.utils.NetworkHelper
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
@@ -18,7 +17,6 @@ val networkModule = module {
     factory { provideOkHttpClient(get()) }
     factory { provideForecastApi(get()) }
     factory { provideLoggingInterceptor() }
-    factory { provideNetworkHelper() }
     single { provideRetrofit(get()) }
 
     single<ApiHelper> {
@@ -27,7 +25,6 @@ val networkModule = module {
 
 }
 
-private fun provideNetworkHelper() = NetworkHelper()
 
 fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
     return Retrofit.Builder().baseUrl(BASE_URL).client(okHttpClient)

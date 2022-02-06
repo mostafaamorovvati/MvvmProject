@@ -5,17 +5,16 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.mvvmproject.R
 import com.example.mvvmproject.data.remote.model.Photo
-import com.example.mvvmproject.data.remote.model.Resource
+import com.example.mvvmproject.utils.Resource
 import com.example.mvvmproject.data.repository.PhotoRepository
 import com.example.mvvmproject.ui.base.BaseViewModel
-import com.example.mvvmproject.utils.NetworkHelper
+import com.example.mvvmproject.utils.isNetworkConnected
 import kotlinx.coroutines.launch
 import org.koin.core.component.KoinApiExtension
 
 @KoinApiExtension
 class PhotoViewModel(
-    private val repository: PhotoRepository,
-    private val mNetworkHelper: NetworkHelper
+    private val repository: PhotoRepository
 ) : BaseViewModel<PhotoNavigator>() {
 
     val mPhotosList = MutableLiveData<Resource<List<Photo>>>()
@@ -24,7 +23,7 @@ class PhotoViewModel(
         viewModelScope.launch {
             mPhotosList.postValue(Resource.loading(null))
             try {
-                if (mNetworkHelper.isNetworkConnected()) {
+                if (isNetworkConnected()) {
                     repository.getPhotos().let {
                         if (it.isSuccessful) {
                             val photos = it.body()

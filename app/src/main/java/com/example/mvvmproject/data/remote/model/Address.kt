@@ -1,9 +1,9 @@
 package com.example.mvvmproject.data.remote.model
 
 data class Address(
-    val city: String,
-    val geo: Geo,
-    val street: String,
-    val suite: String,
-    val zipcode: String
+    val city: String?,
+    val geo: Geo?,
+    val street: String?,
+    val suite: String?,
+    val zipcode: String?
 )

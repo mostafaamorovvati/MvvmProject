@@ -7,10 +7,10 @@ class PhotoAdapterViewModel(
 ) {
 
     fun getPhotoImageUrl(): String {
-        return item.url
+        return item.url ?: ""
     }
 
     fun getTitle(): String {
-        return item.title
+        return item.title ?: ""
     }
 }

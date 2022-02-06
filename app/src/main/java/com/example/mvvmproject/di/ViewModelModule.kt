@@ -15,11 +15,11 @@ val viewModelModule = module {
     }
 
     viewModel {
-        UserViewModel(get(), get())
+        UserViewModel(get())
     }
 
     viewModel {
-        PhotoViewModel(get(), get())
+        PhotoViewModel(get())
     }
 
 
