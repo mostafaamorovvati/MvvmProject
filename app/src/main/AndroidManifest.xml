@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MvvmProject">
         <activity
+            android:name=".ui.user.UserActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
@@ -24,8 +27,7 @@
         </activity>
         <activity
             android:name=".ui.photos.PhotoActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
     </application>
 
 </manifest>

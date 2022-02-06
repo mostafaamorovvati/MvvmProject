@@ -2,6 +2,7 @@ package com.example.mvvmproject.di
 
 import com.example.mvvmproject.ui.main.MainViewModel
 import com.example.mvvmproject.ui.photos.PhotoViewModel
+import com.example.mvvmproject.ui.user.UserViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.core.component.KoinApiExtension
 import org.koin.dsl.module
@@ -10,11 +11,16 @@ import org.koin.dsl.module
 val viewModelModule = module {
 
     viewModel {
-        PhotoViewModel(get(), get())
+        MainViewModel()
     }
 
     viewModel {
-        MainViewModel()
+        UserViewModel()
     }
+
+    viewModel {
+        PhotoViewModel(get(), get())
+    }
+
 
 }

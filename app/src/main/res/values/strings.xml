@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MvvmProject</string>
-    <string name="photo_activity_txt">photo activity</string>
+    <string name="photo_activity_txt">Photo activity</string>
+    <string name="user_activity_txt">User activity</string>
 </resources>

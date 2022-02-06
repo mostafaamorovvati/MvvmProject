@@ -6,6 +6,7 @@ import com.example.mvvmproject.R
 import com.example.mvvmproject.databinding.ActivityMainBinding
 import com.example.mvvmproject.ui.base.BaseActivity
 import com.example.mvvmproject.ui.photos.PhotoActivity
+import com.example.mvvmproject.ui.user.UserActivity
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinApiExtension
 
@@ -29,5 +30,9 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(), MainNav
 
     override fun openPhotoActivity() {
         startActivity(PhotoActivity.openActivity(this))
+    }
+
+    override fun openUserActivity() {
+        startActivity(UserActivity.openActivity(this))
     }
 }

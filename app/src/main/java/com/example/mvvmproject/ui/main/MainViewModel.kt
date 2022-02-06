@@ -10,4 +10,8 @@ class MainViewModel : BaseViewModel<MainNavigator>() {
         getNavigator()?.openPhotoActivity()
     }
 
+    fun openUserActivity(){
+        getNavigator()?.openUserActivity()
+    }
+
 }

@@ -17,6 +17,7 @@
         tools:context=".ui.main.MainActivity">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOpenPhotoActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/standard_margin"
@@ -27,6 +28,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOpenUserActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:onClick="@{view->MainViewModel.openUserActivity()}"
+            android:text="@string/user_activity_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnOpenPhotoActivity" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
