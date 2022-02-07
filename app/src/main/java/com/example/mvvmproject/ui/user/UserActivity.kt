@@ -29,6 +29,7 @@ class UserActivity : BaseActivity<ActivityUserBinding, UserViewModel>(),
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         mBinding = getViewDataBinding()
         mViewModel.setNavigator(this)
 
@@ -85,13 +86,13 @@ class UserActivity : BaseActivity<ActivityUserBinding, UserViewModel>(),
 
     override fun onItemClick(item: User) {
         UserDialog(
-            "NAME: ${item.name}",
-            "USERNAME: ${item.username}",
-            "EMAIL: ${item.email}",
-            "ADDRESS: ${item.address?.city} / ${item.address?.street} / ${item.address?.suite}",
-            "WEBSITE: ${item.website}",
-            "PHONE: ${item.phone}",
-            "COMPANY: ${item.company?.name}"
+            item.name ?: "",
+            item.username ?: "",
+            item.email ?: "",
+            "${item.address?.city} / ${item.address?.street} / ${item.address?.suite}",
+            item.website ?: "",
+            item.phone ?: "",
+            item.company?.name ?: ""
         ).show(supportFragmentManager, "")
     }
 

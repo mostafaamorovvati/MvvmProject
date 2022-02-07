@@ -39,7 +39,7 @@ class UserViewModel(
                 } else {
                     mUsersList.postValue(
                         Resource.error(
-                            context.getString(R.string.no_interner_txt),
+                            context.getString(R.string.no_internet_txt),
                             null
                         )
                     )

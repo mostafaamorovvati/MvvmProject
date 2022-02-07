@@ -8,31 +8,31 @@ class UserItemViewModel(
 ) {
 
     fun getName(): String {
-        return "NAME: ${user.name}"
+        return user.name ?: ""
     }
 
     fun getUserName(): String {
-        return "USERNAME: ${user.username}"
+        return user.username ?: ""
     }
 
     fun getEmail(): String {
-        return "EMAIL: ${user.email}"
+        return user.email ?: ""
     }
 
     fun getAddress(): String {
-        return "ADDRESS: ${user.address?.city} / ${user.address?.street} / ${user.address?.suite}"
+        return "${user.address?.city} / ${user.address?.street} / ${user.address?.suite}"
     }
 
     fun getWebsite(): String {
-        return "WEBSITE: ${user.website}"
+        return user.website ?: ""
     }
 
     fun getPhone(): String {
-        return "PHONE: ${user.phone}"
+        return user.phone ?: ""
     }
 
     fun getCompany(): String {
-        return "COMPANY: ${user.company?.name}"
+        return user.company?.name ?: ""
     }
 
     fun onItemClick() {

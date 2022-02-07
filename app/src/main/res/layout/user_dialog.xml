@@ -20,102 +20,195 @@
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:text="@string/user_details_txt"
+                android:textSize="@dimen/large_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:text="@string/name_txt"
+                android:textSize="@dimen/large_text_size"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/standard_margin"
-                android:layout_marginTop="@dimen/standard_margin"
                 android:layout_marginEnd="@dimen/standard_margin"
                 android:textSize="@dimen/medium_text_size"
+                app:layout_constraintBottom_toBottomOf="@id/tvNameTitle"
+                app:layout_constraintLeft_toRightOf="@id/tvNameTitle"
+                app:layout_constraintTop_toTopOf="@id/tvNameTitle" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUserNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/username_txt"
+                android:textSize="@dimen/large_text_size"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/tvNameTitle" />
+
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/standard_margin"
-                android:layout_marginTop="@dimen/small_margin"
                 android:layout_marginEnd="@dimen/standard_margin"
                 android:textSize="@dimen/medium_text_size"
+                app:layout_constraintBottom_toBottomOf="@id/tvUserNameTitle"
+                app:layout_constraintLeft_toRightOf="@id/tvUserNameTitle"
+                app:layout_constraintTop_toTopOf="@id/tvUserNameTitle" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/email_txt"
+                android:textSize="@dimen/large_text_size"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvName" />
+                app:layout_constraintTop_toBottomOf="@id/tvUserNameTitle" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/standard_margin"
-                android:layout_marginTop="@dimen/small_margin"
                 android:layout_marginEnd="@dimen/standard_margin"
                 android:textSize="@dimen/medium_text_size"
+                app:layout_constraintBottom_toBottomOf="@id/tvEmailTitle"
+                app:layout_constraintLeft_toRightOf="@id/tvEmailTitle"
+                app:layout_constraintTop_toTopOf="@id/tvEmailTitle" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddressTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/address_txt"
+                android:textSize="@dimen/large_text_size"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvUserName" />
+                app:layout_constraintTop_toBottomOf="@id/tvEmailTitle" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/standard_margin"
-                android:layout_marginTop="@dimen/small_margin"
                 android:layout_marginEnd="@dimen/standard_margin"
                 android:textSize="@dimen/medium_text_size"
+                app:layout_constraintBottom_toBottomOf="@id/tvAddressTitle"
+                app:layout_constraintLeft_toRightOf="@id/tvAddressTitle"
+                app:layout_constraintTop_toTopOf="@id/tvAddressTitle" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPhoneTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/phone_txt"
+                android:textSize="@dimen/large_text_size"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+                app:layout_constraintTop_toBottomOf="@id/tvAddressTitle" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/standard_margin"
-                android:layout_marginTop="@dimen/small_margin"
                 android:layout_marginEnd="@dimen/standard_margin"
                 android:textSize="@dimen/medium_text_size"
+                app:layout_constraintBottom_toBottomOf="@id/tvPhoneTitle"
+                app:layout_constraintLeft_toRightOf="@id/tvPhoneTitle"
+                app:layout_constraintTop_toTopOf="@id/tvPhoneTitle" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWebsiteTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/website_txt"
+                android:textSize="@dimen/large_text_size"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvAddress" />
+                app:layout_constraintTop_toBottomOf="@id/tvPhoneTitle" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvWebsite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/standard_margin"
-                android:layout_marginTop="@dimen/small_margin"
                 android:layout_marginEnd="@dimen/standard_margin"
                 android:textSize="@dimen/medium_text_size"
+                app:layout_constraintBottom_toBottomOf="@id/tvWebsiteTitle"
+                app:layout_constraintLeft_toRightOf="@id/tvWebsiteTitle"
+                app:layout_constraintTop_toTopOf="@id/tvWebsiteTitle" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCompanyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/company_txt"
+                android:textSize="@dimen/large_text_size"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvPhone" />
+                app:layout_constraintTop_toBottomOf="@id/tvWebsiteTitle" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvCompany"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/standard_margin"
-                android:layout_marginTop="@dimen/small_margin"
                 android:layout_marginEnd="@dimen/standard_margin"
                 android:textSize="@dimen/medium_text_size"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWebsite" />
+                app:layout_constraintBottom_toBottomOf="@id/tvCompanyTitle"
+                app:layout_constraintLeft_toRightOf="@id/tvCompanyTitle"
+                app:layout_constraintTop_toTopOf="@id/tvCompanyTitle" />
 
-            <Button
-                android:id="@+id/btnOk"
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/standard_margin"
-                android:text="@string/ok_txt"
-                android:textSize="@dimen/medium_text_size"
-                android:textStyle="bold"
                 android:onClick="@{view->UserDialogViewModel.onOkClick()}"
+                android:text="@string/ok_txt"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvCompany" />
+                app:layout_constraintTop_toBottomOf="@id/tvCompanyTitle" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

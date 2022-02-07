@@ -2,6 +2,14 @@
     <string name="app_name">MvvmProject</string>
     <string name="photo_activity_txt">Photo activity</string>
     <string name="user_activity_txt">User activity</string>
-    <string name="no_interner_txt">No internet connection</string>
-    <string name="ok_txt">Ok</string>
+    <string name="no_internet_txt">No internet connection</string>
+    <string name="ok_txt">OK</string>
+    <string name="name_txt">Name:</string>
+    <string name="username_txt">Username:</string>
+    <string name="email_txt">Email:</string>
+    <string name="address_txt">Address:</string>
+    <string name="phone_txt">Phone:</string>
+    <string name="website_txt">Website:</string>
+    <string name="company_txt">Company:</string>
+    <string name="user_details_txt">User details</string>
 </resources>
