@@ -11,6 +11,6 @@ interface ApiService {
     suspend fun getPhotos(): Response<List<Photo>>
 
     @GET("users")
-    suspend fun getUsers():Response<List<User>>
+    suspend fun getUsers(): Response<List<User>>
 
 }

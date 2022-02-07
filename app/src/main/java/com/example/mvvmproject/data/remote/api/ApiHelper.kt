@@ -8,6 +8,6 @@ interface ApiHelper {
 
     suspend fun getPhotos(): Response<List<Photo>>
 
-    suspend fun getUsers():Response<List<User>>
+    suspend fun getUsers(): Response<List<User>>
 
 }
